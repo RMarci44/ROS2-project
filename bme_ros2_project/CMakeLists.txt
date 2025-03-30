@@ -27,7 +27,6 @@ install(DIRECTORY
   launch
   worlds
   models
-  photos
   DESTINATION share/${PROJECT_NAME}
 )
 
