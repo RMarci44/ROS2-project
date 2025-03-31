@@ -31,9 +31,9 @@
     </inertial>
 
     <collision name='collision'>
-      <origin xyz="0 -0.08 0.2" rpy=" 0 0 0"/> 
+      <origin xyz="0.08 0 0.2" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".4 .7 .4"/>
+        <box size=".7 .4 .4"/>
       </geometry>
     </collision>
 
@@ -53,10 +53,11 @@
     <origin xyz="0.125 0.12875 0.0375" rpy="0 0 0"/>
     <child link="front_left_wheel"/>
     <parent link="base_link"/>
-    <axis xyz="1 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="10"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
+    <origin xyz="0.125 -0.12875 0.0375" rpy="0 0 0"/>
 
   <link name='front_left_wheel'>
     <inertial>
@@ -70,14 +71,14 @@
     </inertial>
 
     <collision>
-      <origin xyz="0.04 0 0" rpy="0 1.5707 0"/> 
+      <origin xyz="0 0.04 0" rpy="0 1.5707 1.5707"/> 
       <geometry>
         <cylinder radius=".095" length=".08"/>
       </geometry>
     </collision>
 
     <visual name='front_left_wheel_visual'>
-      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 -1.5707"/>
       <geometry>
         <!-- <cylinder radius=".1" length=".05"/> -->
         <mesh filename = "package://bme_ros2_project/meshes/wheel.dae"/>
@@ -87,10 +88,10 @@
   </link>
 
   <joint type="continuous" name="rear_left_wheel_joint">
-    <origin xyz="-0.125 0.12875 0.0375" rpy="0 3.14159 0"/>
+    <origin xyz="-0.125 0.12875 0.0375" rpy="0 0 0"/>
     <child link="rear_left_wheel"/>
     <parent link="base_link"/>
-    <axis xyz="1 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="10"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
@@ -107,14 +108,14 @@
     </inertial>
 
     <collision>
-      <origin xyz="0.04 0 0" rpy="0 1.5707 0"/> 
+      <origin xyz="0 0.04 0" rpy="0 1.5707 1.5707"/> 
       <geometry>
         <cylinder radius=".095" length=".08"/>
       </geometry>
     </collision>
 
     <visual name='rear_left_wheel_visual'>
-      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 -1.5707"/>
       <geometry>
         <!-- <cylinder radius=".1" length=".05"/> -->
         <mesh filename = "package://bme_ros2_project/meshes/wheel.dae"/>
@@ -127,7 +128,7 @@
     <origin xyz="0.125 -0.12875 0.0375" rpy="0 0 0"/>
     <child link="front_right_wheel"/>
     <parent link="base_link"/>
-    <axis xyz="1 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="10"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
@@ -144,7 +145,7 @@
     </inertial>
 
     <collision>
-      <origin xyz="0.04 0 0" rpy="0 1.5707 0"/> 
+      <origin xyz="0 -0.04 0" rpy="0 1.5707 1.5707"/> 
       <geometry>
         <cylinder radius=".095" length=".08"/>
       </geometry>
@@ -161,10 +162,10 @@
   </link>
 
   <joint type="continuous" name="rear_right_wheel_joint">
-    <origin xyz="-0.125 -0.12875 0.0375" rpy="0 3.14159 0"/>
+    <origin xyz="-0.125 -0.12875 0.0375" rpy="0 0 0"/>
     <child link="rear_right_wheel"/>
     <parent link="base_link"/>
-    <axis xyz="1 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="10"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
@@ -181,7 +182,7 @@
     </inertial>
 
     <collision>
-      <origin xyz="0.04 0 0" rpy="0 1.5707 0"/> 
+      <origin xyz="0 -0.04 0" rpy="0 1.5707 1.5707"/> 
       <geometry>
         <cylinder radius=".095" length=".08"/>
       </geometry>
@@ -199,47 +200,39 @@
 
   <!-- STEP 6 - Gazebo frictions and colors -->
   <gazebo reference="front_left_wheel">
-    <mu1>1.5</mu1>
-    <mu2>0.7</mu2>
-    <kp>200000.0</kp>
-    <kd>5000.0</kd>
-    <minDepth>0.002</minDepth>
-    <maxVel>0.3</maxVel>
-    <fdir1>0 1 0</fdir1>
-    <!-- <material>Gazebo/Green</material> -->
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.0001</minDepth>
+    <maxVel>1.0</maxVel>
   </gazebo>
 
   <gazebo reference="front_right_wheel">
-    <mu1>1.5</mu1>
-    <mu2>0.7</mu2>
-    <kp>200000.0</kp>
-    <kd>5000.0</kd>
-    <minDepth>0.002</minDepth>
-    <maxVel>0.3</maxVel>
-    <fdir1>0 1 0</fdir1>
-    <!-- <material>Gazebo/Green</material> -->
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.0001</minDepth>
+    <maxVel>1.0</maxVel>
   </gazebo>
 
   <gazebo reference="rear_left_wheel">
-    <mu1>1.5</mu1>
-    <mu2>0.7</mu2>
-    <kp>200000.0</kp>
-    <kd>5000.0</kd>
-    <minDepth>0.002</minDepth>
-    <maxVel>0.3</maxVel>
-    <fdir1>0 1 0</fdir1>
-    <!-- <material>Gazebo/Green</material> -->
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.0001</minDepth>
+    <maxVel>1.0</maxVel>
   </gazebo>
 
   <gazebo reference="rear_right_wheel">
-    <mu1>1.5</mu1>
-    <mu2>0.7</mu2>
-    <kp>200000.0</kp>
-    <kd>5000.0</kd>
-    <minDepth>0.002</minDepth>
-    <maxVel>0.3</maxVel>
-    <fdir1>0 1 0</fdir1>
-    <!-- <material>Gazebo/Green</material> -->
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.0001</minDepth>
+    <maxVel>1.0</maxVel>
   </gazebo>
 
   <gazebo reference="base_link">
@@ -250,7 +243,7 @@
 
   <!-- Camera -->
   <joint type="fixed" name="camera_joint">
-    <origin xyz="0 -0.34875 0.10825" rpy="0 0 0"/>
+    <origin xyz="0.34875 0 0.10825" rpy="0 0 0"/>
     <child link="camera_link"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" />
@@ -299,7 +292,7 @@
 
   <!-- IMU -->
   <joint name="imu_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 -1.5707" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="base_link"/>
     <child link="imu_link" />
   </joint>
@@ -310,10 +303,10 @@
 
   <!-- Lidar -->
   <joint type="fixed" name="scan_joint">
-    <origin xyz="0.0 0 0.42375" rpy="0 0 0"/>
+    <origin xyz="0.0 0 0.44375" rpy="0 0 0"/>
     <child link="scan_link"/>
     <parent link="base_link"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name='scan_link'>
