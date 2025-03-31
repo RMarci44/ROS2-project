@@ -250,7 +250,7 @@
 
   <!-- Camera -->
   <joint type="fixed" name="camera_joint">
-    <origin xyz="0.225 0 0.075" rpy="0 0 0"/>
+    <origin xyz="0 -0.34875 0.10825" rpy="0 0 0"/>
     <child link="camera_link"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" />
@@ -310,7 +310,7 @@
 
   <!-- Lidar -->
   <joint type="fixed" name="scan_joint">
-    <origin xyz="0.0 0 0.15" rpy="0 0 0"/>
+    <origin xyz="0.0 0 0.42375" rpy="0 0 0"/>
     <child link="scan_link"/>
     <parent link="base_link"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
