@@ -26,7 +26,11 @@
 - A megoldás során a robot autonóm módon térképezi fel a környezetet, és navigál benne, miközben mozgó akadályok (például ember vagy állat) kerülnek szimulálásra. 
 - Emellett készítünk egy saját 3D modellt, Collada meshből generált URDF fájlt, illetve bővítjük a meglévő robotmodellt egyedi komponenssel és szenzorral.
   
-
-
+## Projekt indítása:
+```bash
+ros2 launch bme_ros2_project spawn_robot.launch.py
+ros2 launch bme_ros2_project navigation_with_slam.launch.py
+ros2 launch explore_lite explore.launch.py```
+```
 
 
