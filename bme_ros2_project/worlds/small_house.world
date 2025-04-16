@@ -854,35 +854,35 @@
             <pose>0 0 1.0 0 0 0</pose>
           </waypoint>
           <waypoint>
-            <time>8</time>
+            <time>16</time>
             <pose>3.5 0 1.0 0 0 0</pose>
           </waypoint>
           <waypoint>
-            <time>10</time>
+            <time>20</time>
             <pose>3.5 0 1.0 0 0 -0.785398</pose>
           </waypoint>
           <waypoint>
-            <time>20</time>
+            <time>40</time>
             <pose>7 -3.5 1.0 0 0 -0.785398</pose>
           </waypoint>
           <waypoint>
-            <time>23</time>
+            <time>46</time>
             <pose>7 -3.5 1.0 0 0 2.35619</pose>
           </waypoint>
           <waypoint>
-            <time>33</time>
+            <time>66</time>
             <pose>3.5 0 1.0 0 0 2.35619</pose>
           </waypoint>
           <waypoint>
-            <time>35</time>
+            <time>70</time>
             <pose>3.5 0 1.0 0 0 3.14159</pose>
           </waypoint>
           <waypoint>
-            <time>43</time>
+            <time>86</time>
             <pose>0 0 1.0 0 0 3.14159</pose>
           </waypoint>
           <waypoint>
-            <time>45</time>
+            <time>90</time>
             <pose>0 0 1.0 0 0 0</pose>
           </waypoint>
         </trajectory>
