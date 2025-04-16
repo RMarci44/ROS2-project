@@ -30,7 +30,12 @@
 ```bash
 ros2 launch bme_ros2_project spawn_robot.launch.py
 ros2 launch bme_ros2_project navigation_with_slam.launch.py
-ros2 launch explore_lite explore.launch.py```
+ros2 launch explore_lite explore.launch.py
+```
+## Colcon workspace létrehozása
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
 ```
 
 
