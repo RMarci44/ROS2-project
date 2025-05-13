@@ -313,7 +313,7 @@
   </library_geometries>
   <library_visual_scenes>
     <visual_scene id="aws_Trash_01_collision" name="aws_Trash_01_collision">
-      <node name="aws_Trash_01_collision" id="aws_Trash_01_collision" sid="aws_Trash_01_collision"><matrix sid="matrix">1.653609 0.000000 0.000000 0.000000 0.000000 1.653609 0.000000 0.000000 0.000000 0.000000 1.653609 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#aws_Trash_01_collision-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="aws_Trash_01_collision" id="aws_Trash_01_collision" sid="aws_Trash_01_collision"><matrix sid="matrix">3.307218 0.000000 0.000000 0.000000 0.000000 3.307218 0.000000 0.000000 0.000000 0.000000 3.307218 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#aws_Trash_01_collision-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
       <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>
