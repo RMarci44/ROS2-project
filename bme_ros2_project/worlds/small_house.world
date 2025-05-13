@@ -274,13 +274,13 @@
         <pose frame=''>6.001449 -5.549002 0 0 -0 0</pose>
 	</model>
 	
-	<model name='Dumbbell_01_001'>
+	<!-- <model name='Dumbbell_01_001'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_Dumbbell_01</uri>
         </include>
         <pose frame=''>2.512849 2.717787 0.002183 0 -0 0</pose>
-	</model>
+	</model> -->
 	<model name='Tablet_01_001'>
         <static>true</static>    
         <include>
@@ -584,15 +584,15 @@
         </include>
         <pose frame=''>7.15317 0.982767 0.817812 -0.001238 -0.000976 1.02476</pose>
 	</model>
-	<model name='Trash_01_001'>
+	<!-- <model name='Trash_01_001'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_Trash_01</uri>
         </include>
         <pose frame=''>2.360151 -0.796238 0.011 0 -0 0</pose>
-	</model>
+	</model> -->
     <model name='Trash_01_002'>
-        <static>true</static>    
+        <static>true</static>  
         <include>
             <uri>model://aws_robomaker_residential_Trash_01</uri>
         </include>
