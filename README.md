@@ -37,5 +37,6 @@ ros2 launch explore_lite explore.launch.py
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 ```
-
+##Videó
+https://www.youtube.com/watch?v=Rc5UNipxXHQ&ab_channel=P%C3%A9terSoros%C3%A1nszki
 
