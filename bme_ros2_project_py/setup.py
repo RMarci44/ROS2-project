@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'docking_node = bme_ros2_project_py.docking_node:main',
         ],
     },
 )

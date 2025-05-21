@@ -96,6 +96,20 @@ def generate_launch_description():
         }.items()
     )
 
+    docking_client_node = Node(
+        package='bme_ros2_project_py',
+        executable='docking_client_node',
+        name='docking_client_node',
+        output='screen',
+        parameters=[{
+            'dock_pose.x': 4.084, 
+            'dock_pose.y': 5.962, 
+            'dock_pose.theta_degrees': -90.0,
+            'dock_pose.frame_id': 'map',
+            'dock_action.max_runtime_sec': 120
+        }]
+    )
+
     launchDescriptionObject = LaunchDescription()
 
     launchDescriptionObject.add_action(rviz_launch_arg)
@@ -105,5 +119,6 @@ def generate_launch_description():
     #launchDescriptionObject.add_action(interactive_marker_twist_server_node)
     launchDescriptionObject.add_action(slam_toolbox_launch)
     launchDescriptionObject.add_action(navigation_launch)
+    launchDescriptionObject.add_action(docking_client_node)
 
     return launchDescriptionObject
