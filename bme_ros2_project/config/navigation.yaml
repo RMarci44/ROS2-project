@@ -60,11 +60,11 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.22
+      max_vel_x: 2.0
       max_vel_y: 0.0
       max_vel_theta: 2.84
       min_speed_xy: 0.0
-      max_speed_xy: 0.22
+      max_speed_xy: 2.0
       min_speed_theta: 0.0
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
@@ -110,10 +110,10 @@ controller_server:
       vx_std: 0.2
       vy_std: 0.2
       wz_std: 0.4
-      vx_max: 0.5
+      vx_max: 2.0
       vx_min: -0.35
-      vy_max: 0.5
-      wz_max: 1.9
+      vy_max: 1.0
+      wz_max: 3.5
       iteration_count: 1
       prune_distance: 1.7
       transform_tolerance: 0.1

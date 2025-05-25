@@ -67,9 +67,14 @@ class DockingNode(Node):
 
         def result_callback(future):
             result = future.result().result
-            self.get_logger().info('Sikeres dokkolás!')
-            response.success = True
-            response.message = 'Sikeres dokkolás!'
+            if result:
+                self.get_logger().info('Sikeres dokkolás!')
+                response.success = True
+                response.message = 'Sikeres dokkolás!'
+            else:
+                self.get_logger().error('Dokkolás sikertelen!')
+                response.success = False
+                response.message = 'Dokkolás sikertelen!'
 
         send_goal_future.add_done_callback(goal_response_callback)
         return response
