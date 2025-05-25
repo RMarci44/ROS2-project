@@ -98,15 +98,14 @@ def generate_launch_description():
 
     docking_client_node = Node(
         package='bme_ros2_project_py',
-        executable='docking_client_node',
-        name='docking_client_node',
+        executable='docking_node',
+        name='docking_node',
         output='screen',
         parameters=[{
             'dock_pose.x': 4.084, 
             'dock_pose.y': 5.962, 
             'dock_pose.theta_degrees': -90.0,
             'dock_pose.frame_id': 'map',
-            'dock_action.max_runtime_sec': 120
         }]
     )
 

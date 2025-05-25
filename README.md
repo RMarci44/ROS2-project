@@ -13,16 +13,18 @@ Készítette:
 - Sorosánszki Péter
 
 # Tartalomjegyzék
-1. [Feladatleírás](#feladatleírás)
-2. [Előkövetelmények](#előkövetelmények)
-3. [Telepítés](#telepítés)
-4. [Robot](#robot)  
-4.1. [Robotmodell](#robotmodell)  
-4.2. [Szenzorok](#szenzorok)
-5. [Környezet](#környezet)
-6. [Feltérképezés](#feltérképezés)
-7. [Futtatás](#futtatás)
-8. [Szimulációs folyamat](#szimulációs-folyamat)
+- [ROS 2 projekt a Robotrendszerek laboratórium tárgyra (BMEGEMINMRL)](#ros-2-projekt-a-robotrendszerek-laboratórium-tárgyra-bmegeminmrl)
+- [Tartalomjegyzék](#tartalomjegyzék)
+- [Feladatleírás](#feladatleírás)
+- [Előkövetelmények](#előkövetelmények)
+- [Telepítés](#telepítés)
+- [Robot](#robot)
+  - [Robotmodell](#robotmodell)
+  - [Szenzorok](#szenzorok)
+- [Környezet](#környezet)
+- [Feltérképezés](#feltérképezés)
+- [Futtatás](#futtatás)
+- [Szimulációs folyamat](#szimulációs-folyamat)
 
 # Feladatleírás
 A projekt megvalósítása során a következő követelményeket kellett teljesíteni:
@@ -161,6 +163,11 @@ A szimuláció futtatása három részből áll:
 - A teljes rendelkezésre álló terület feltérképezése:
     ```bash
     ros2 launch explore_lite explore.launch.py
+    ```
+- Robot dockolása és undockolása:
+    ```bash
+    ros2 service call /dock std_srvs/srv/Trigger
+    ros2 service call /undock std_srvs/srv/Trigger
     ```
 
 # Szimulációs folyamat
