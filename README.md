@@ -149,7 +149,9 @@ A projekt során a feltérképezést a SLAM toolbox segítségével valósított
 Az m-explore csomagot használjuk annak érdekében, hogy a teljes területet feltérképezzük. A csomag a már feltérképezett környezet határai alapján navigálja a robotot úgy, hogy az megtalálja a rendelkezésre álló terület összes fizikai határát.
 
 ![alt text][image3]
-
+# Saját Node
+A saját node-unk egy dokkolót valósít meg, aminél, ha kiadjuk a parancsot a robot vissza megy a "töltőállomásra", ekkor leállítja a feltérképezést. Abban az esetben, amikor, pedig kikapcsoljuk a dokkolást, akkor folytatja a robot a feltérképezését a háznak. 
+<a href="https://youtu.be/xDec6R7a7Zw"><img width="600" src="./assets/video.png"></a>
 # Futtatás
 A szimuláció futtatása három részből áll:
 - Gazebo szimuláció indítása:
