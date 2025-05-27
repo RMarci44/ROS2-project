@@ -151,7 +151,7 @@ Az m-explore csomagot használjuk annak érdekében, hogy a teljes területet fe
 ![alt text][image3]
 # Saját Node
 A saját node-unk egy dokkolót valósít meg, aminél, ha kiadjuk a parancsot a robot vissza megy a "töltőállomásra", ekkor leállítja a feltérképezést. Abban az esetben, amikor kikapcsoljuk a dokkolást, akkor folytatja a robot a feltérképezését a háznak. 
-<a href="https://youtu.be/xDec6R7a7Zw"><img width="600" src="./assets/video.png"></a>
+<a href="https://youtu.be/xDec6R7a7Zw"./assets/video.png"></a>
 # Futtatás
 A szimuláció futtatása három részből áll:
 - Gazebo szimuláció indítása:
