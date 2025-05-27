@@ -13,8 +13,6 @@ Készítette:
 - Sorosánszki Péter
 
 # Tartalomjegyzék
-- [ROS 2 projekt a Robotrendszerek laboratórium tárgyra (BMEGEMINMRL)](#ros-2-projekt-a-robotrendszerek-laboratórium-tárgyra-bmegeminmrl)
-- [Tartalomjegyzék](#tartalomjegyzék)
 - [Feladatleírás](#feladatleírás)
 - [Előkövetelmények](#előkövetelmények)
 - [Telepítés](#telepítés)
@@ -23,6 +21,7 @@ Készítette:
   - [Szenzorok](#szenzorok)
 - [Környezet](#környezet)
 - [Feltérképezés](#feltérképezés)
+- [Saját Node](#saját-node)
 - [Futtatás](#futtatás)
 - [Szimulációs folyamat](#szimulációs-folyamat)
 
@@ -149,9 +148,13 @@ A projekt során a feltérképezést a SLAM toolbox segítségével valósított
 Az m-explore csomagot használjuk annak érdekében, hogy a teljes területet feltérképezzük. A csomag a már feltérképezett környezet határai alapján navigálja a robotot úgy, hogy az megtalálja a rendelkezésre álló terület összes fizikai határát.
 
 ![alt text][image3]
+
 # Saját Node
-A saját node-unk egy dokkolót valósít meg, aminél, ha kiadjuk a parancsot a robot vissza megy a "töltőállomásra", ekkor leállítja a feltérképezést. Abban az esetben, amikor kikapcsoljuk a dokkolást, akkor folytatja a robot a feltérképezését a háznak. 
-<a href="https://youtu.be/xDec6R7a7Zw"><img width="600" src="./assets/video.png"></a>
+A saját node-unk egy dokkolót valósít meg, aminél ha kiadjuk a parancsot, a robot visszamegy a "töltőállomásra", ekkor leállítja a feltérképezést. Abban az esetben, amikor kikapcsoljuk a dokkolást, akkor folytatja a robot a feltérképezését a háznak.
+
+Ennek folyamatát az alábbi videó szemlélteti.
+
+<a href="https://youtu.be/xDec6R7a7Zw"><img width="600" src="./assets/docking.png"></a>
 
 # Futtatás
 A szimuláció futtatása három részből áll:
@@ -167,7 +170,7 @@ A szimuláció futtatása három részből áll:
     ```bash
     ros2 launch explore_lite explore.launch.py
     ```
-- Robot dockolása és undockolása:
+- Robot dokkolása és a dokkoló elhagyása:
     ```bash
     ros2 service call /dock std_srvs/srv/Trigger
     ros2 service call /undock std_srvs/srv/Trigger
